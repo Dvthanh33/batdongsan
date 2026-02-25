@@ -1,0 +1,271 @@
+#phoneNumber-error {
+    color: #cc300c;
+}
+
+#fullName-error {
+    color: #cc300c;
+}
+.search-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.search-card label {
+    font-weight: 600;
+}
+
+.btn-search {
+    padding: 8px 25px;
+    font-weight: 600;
+}
+
+.action-bar {
+    margin: 20px 0;
+    text-align: right;
+}
+
+table thead th {
+    background: #f5f6fa;
+    text-align: center;
+}
+
+.modal-header {
+    background: #438eb9;
+    color: #fff;
+}
+body {
+    background-color: #f8f9fc;
+}
+
+.main-content {
+    padding: 40px 40px;
+}
+
+.page-header h1 {
+    color: #4e73df;
+    font-weight: 600;
+}
+.widget-box {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: none;
+}
+
+.widget-header {
+    background: linear-gradient(45deg, #4e73df, #224abe);
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.widget-title {
+    font-weight: 600;
+}
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #d1d3e2;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78,115,223,.25);
+}
+.btn {
+    border-radius: 30px !important;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-success {
+    background-color: #1cc88a;
+    border-color: #1cc88a;
+}
+
+.btn-success:hover {
+    background-color: #17a673;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: #e74a3b;
+    border-color: #e74a3b;
+}
+
+.btn-danger:hover {
+    background-color: #be2617;
+    transform: translateY(-2px);
+}
+
+.btn-info {
+    background-color: #36b9cc;
+    border-color: #36b9cc;
+}
+table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #4e73df;
+    color: white;
+}
+
+.table thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #eef2ff;
+    transition: 0.2s;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fc;
+}
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4e73df;
+    cursor: pointer;
+}
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #4e73df, #224abe);
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+:root{
+    --primary:#2563eb;
+    --bg:#f1f5f9;
+    --card:#ffffff;
+    --text:#0f172a;
+    --muted:#64748b;
+    --border:#e2e8f0;
+}
+
+/* Nền toàn trang */
+body{
+    font-family:'Inter',sans-serif;
+    background: linear-gradient(135deg, #0d6efd, #1e3a8a);
+    color:#fff;
+}
+
+/* Layout */
+.main-content{
+    padding:40px 0;
+}
+
+.container-fluid{
+        width:100%;
+        padding-left:40px;
+        padding-right:40px;
+}
+
+/* ===== Header ===== */
+.dashboard-header h2{
+    font-weight:700;
+    color:#0f172a;
+}
+
+.dashboard-header p{
+    font-size:30px;
+    color:#0f172a;
+}
+
+/* ===== KPI CARD ===== */
+.kpi-card{
+    background:var(--card);
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:all .3s ease;
+    height:100%;
+}
+
+.kpi-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.kpi-title{
+    font-size:14px;
+    color:var(--muted);
+    margin-bottom:10px;
+}
+
+.kpi-value{
+    font-size:34px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+/* Phần tăng giảm */
+.kpi-change{
+    font-size:13px;
+    margin-top:10px;
+    display:inline-flex;
+    align-items:center;
+    padding:6px 10px;
+    border-radius:20px;
+    font-weight:600;
+}
+
+.kpi-change svg{
+    margin-right:6px;
+}
+
+.up{
+    background:#dcfce7;
+    color:#16a34a;
+}
+
+.down{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ===== Chart ===== */
+.chart-wrapper{
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    margin-top:40px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== Quick Actions ===== */
+.quick-actions h5{
+    color:#0f172a;
+}
+
+.action-btn{
+    background:#ffffff;
+    border-radius:12px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:#0f172a;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:all .2s;
+}
+
+.action-btn:hover{
+    background:#2563eb;
+    color:#ffffff;
+    transform:translateY(-3px);
+}
+
+.action-btn svg{
+    margin-right:10px;
+}
