@@ -6,14 +6,15 @@
 	<title><dec:title default="Trang chủ" /></title>
 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome/4.5.0/css/font-awesome.min.css" />
+<%--    <link rel="stylesheet" href="font-awesome/4.5.0/css/font-awesome.min.css" />--%>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/css/validate-customer.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/admin/css/custom-admin.css">
     <script type='text/javascript' src="assets/js/ace-extra.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+<%--	<link rel="stylesheet" href="assets/css/ace.min.css" />--%>
 	<!-- jquery -->
 	<script type='text/javascript' src="js/2.1.4/jquery.min.js"></script>
 
