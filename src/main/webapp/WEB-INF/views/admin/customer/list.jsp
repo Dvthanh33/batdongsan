@@ -272,23 +272,26 @@ assignment(data);
         $('#listForm').submit();
     });
     function deleteCustomer(id){
-        if(!confirm("Bạn có chắc chắn muốn xóa khách hàng này?")){
-        return;
-        }
-        var customerId= [id];
+    showAlertBeforeDelete(function(){
+        var customerId = [id];
         deleteCustomers(customerId);
-    }
+    });
+}
     $('#btnDeleteCustomer').click(function(e){
-        e.preventDefault();
-        var customerIds=$('#tableList').find('tbody input[type=checkbox]:checked').map(function(){
-            return $(this).val();
-        }).get();
-        if(customerIds.length === 0){
+    e.preventDefault();
+
+    var customerIds = $('#tableList').find('tbody input[type=checkbox]:checked').map(function(){
+        return $(this).val();
+    }).get();
+
+    if(customerIds.length === 0){
         alert("Vui lòng chọn khách hàng cần xóa");
         return;
     }
-            deleteCustomers(customerIds);
+    showAlertBeforeDelete(function(){
+        deleteCustomers(customerIds);
     });
+});
     function deleteCustomers(data){
     $.ajax({
         type:"DELETE",

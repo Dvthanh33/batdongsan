@@ -847,7 +847,7 @@
     </div>
 </div>
 
-<section class="vh-100 gradient-custom form-register">
+<section id="register" class="vh-100 gradient-custom form-register">
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -923,7 +923,7 @@
                                 <a href="#!" class="login-extension text-white"><i
                                         class="fab fa-google fa-lg"></i></a>
                             </div>
-                            <p class="text-center text-muted mt-2 mb-0">Have already an account? <a href="#!"
+                            <p class="text-center text-muted mt-2 mb-0">Have already an account? <a href="/admin/login"
                                                                                                     class="fw-bold text-body"><u style="color: white ;">Login here</u></a></p>
                             </form>
                         </div>

@@ -52,14 +52,14 @@
                 <label class="col-xs-4 control-label">Tên khách hàng</label>
                 <div class="col-xs-8">
                     <form:input class="form-control" path="fullName"
-                                placeholder="Nhập tên khách hàng"/>
+                                placeholder="Nhập tên khách hàng" required="required"/>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-xs-4 control-label">Số điện thoại</label>
                 <div class="col-xs-8">
                     <form:input class="form-control" path="customerPhone"
-                                placeholder="Nhập số điện thoại"/>
+                                placeholder="Nhập số điện thoại" required="required"/>
                 </div>
             </div>
             <div class="form-group">
@@ -274,6 +274,11 @@
 <script>
        $('#btnAddOrUpdateCustomer').click(function (e) {
     e.preventDefault();
+    //kiểm tra form hợp lệ
+    if (!document.getElementById("listForm").checkValidity()) {
+        document.getElementById("listForm").reportValidity();
+        return;
+    }
     var data = {};
     var formData = $('#listForm').serializeArray();
     $.each(formData, function (i, v) {
@@ -288,8 +293,7 @@
             alert("Lưu khách hàng thành công");
             window.location.href = "/admin/customer-list";
         },
-        error: function (res) {
-            console.log(res);
+        error: function () {
             alert("Lưu khách hàng thất bại");
         }
     });

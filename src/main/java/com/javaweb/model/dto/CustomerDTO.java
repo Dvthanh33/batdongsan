@@ -1,8 +1,11 @@
 package com.javaweb.model.dto;
+import javax.validation.constraints.NotBlank;
 
 public class CustomerDTO extends AbstractDTO{
+    @NotBlank(message = "Tên khách hàng không được để trống")
     private String fullName;
     private String managementStaff;
+    @NotBlank(message = "Số điện thoại không được để trống")
     private String customerPhone;
     private String email;
     private String demand;

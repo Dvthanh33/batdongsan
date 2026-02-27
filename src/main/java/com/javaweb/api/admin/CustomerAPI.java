@@ -1,20 +1,19 @@
 package com.javaweb.api.admin;
-
 import com.javaweb.entity.CustomerEntity;
-import com.javaweb.model.dto.AssignmentBuildingDTO;
 import com.javaweb.model.dto.AssignmentCustomerDTO;
 import com.javaweb.model.dto.CustomerDTO;
 import com.javaweb.model.response.ResponseDTO;
 import com.javaweb.repository.CustomerRepository;
-import com.javaweb.service.AssignmentBuildingService;
 import com.javaweb.service.AssignmentCustomerService;
 import com.javaweb.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
+import javax.validation.Valid;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @Transactional
@@ -27,7 +26,17 @@ public class CustomerAPI {
     @Autowired
     private AssignmentCustomerService assignmentCustomerService;
     @PostMapping
-    public ResponseDTO addOrUpdateCustomer(@RequestBody CustomerDTO customerDTO) {
+    public ResponseDTO addOrUpdateCustomer(@Valid @RequestBody CustomerDTO customerDTO, BindingResult result) {
+        if (result.hasErrors()) {
+            Map<String, String> errors = new HashMap<>();
+            result.getFieldErrors().forEach(error ->
+                    errors.put(error.getField(), error.getDefaultMessage())
+            );
+            ResponseDTO response = new ResponseDTO();
+            response.setMessage("Validation failed");
+            response.setData(errors);
+            return response;
+        }
         return customerService.save(customerDTO);
     }
     @DeleteMapping

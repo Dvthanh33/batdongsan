@@ -85,7 +85,7 @@ public class BuildingRepositoryImpl implements BuildingRepositoryCustom {
             List<String> types = buildingSearchbuilder.getTypeCode();
             for (int i = 0; i < types.size(); i++) {
                 where.append(" b.type LIKE '%").append(types.get(i)).append("%'");
-                    if (i < types.size() - 1) {
+                if (i < types.size() - 1) {
                     where.append(" OR ");
                 }
             }
