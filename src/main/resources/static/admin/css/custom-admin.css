@@ -121,6 +121,8 @@ body{
 /* ================= QUICK ACTION ================= */
 .quick-actions h5{
     color:#e6cc79;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .action-btn{
